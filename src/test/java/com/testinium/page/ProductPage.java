@@ -35,6 +35,7 @@ public class ProductPage {
         methods.waitBySeconds(2);
     }
     public void turkishClassics(){
+        methods.scrollWithAction(By.xpath("//img[@title='Türk Klasikleri'])"));
         methods.click(By.xpath("//img[@title='Türk Klasikleri'])"));
         methods.waitBySeconds(2);
     }
