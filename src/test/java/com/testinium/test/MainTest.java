@@ -11,40 +11,38 @@ public class MainTest extends BaseTest {
     LoginTest loginTest;
 
 
+    @Before
+    public void forStart() {
+        productPage = new ProductPage();
+        loginTest = new LoginTest();
 
-        @Before
-        public void forStart(){
-            productPage = new ProductPage();
-            loginTest = new LoginTest();
-
-        }
-
-
-
-        @Test
-        public void fullTest(){
-
-            loginTest.loginTest();
-            productPage.loginCheck();
-            productPage.searchForItem();
-            productPage.getDown();
-            productPage.addFavs();
-            productPage.backToMainPage();
-            productPage.lvlCatalog();
-            productPage.turkishClassics();
-            productPage.filteringTurkishClassics();
-            productPage.allBooksAndHover();
-            productPage.pickingRandomItems();
-            productPage.favs();
-            productPage.removeFavs();
-            productPage.goToCartPage();
-            productPage.increseQuantity();
-            productPage.refreshQuantity();
-            productPage.buyItems();
-            productPage.goToAddressAndAdd();
-            productPage.addCardAndControlBuying();
-            loginTest.logoutTest();
-
-        }
     }
+
+
+    @Test
+    public void fullTest() {
+
+        loginTest.loginTest();
+        productPage.loginCheck();
+        productPage.searchForItem();
+        productPage.getDown();
+        productPage.addFavs();
+        productPage.backToMainPage();
+        productPage.lvlCatalog();
+        productPage.turkishClassics();
+        productPage.filteringTurkishClassics();
+        productPage.allBooksAndHover();
+        productPage.pickingRandomItems();
+        productPage.favs();
+        productPage.removeFavs();
+        productPage.goToCartPage();
+        productPage.increseQuantity();
+        productPage.refreshQuantity();
+        productPage.buyItems();
+        productPage.goToAddressAndAdd();
+        productPage.addCardAndControlBuying();
+        loginTest.logoutTest();
+
+    }
+}
 
